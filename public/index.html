@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World!</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  
+  <div id="actions"></div>
+  <div class="container">
+    <div class="container-video">
+      <video class="player__video viewer" muted loop>
+        <source src="video.mp4" type="video/mp4">
+      </video>
+      <div class="controls">
+        <div class="progress">
+          <div class="progress__filled"></div>
+        </div>
+        <div class="controls__bottom">
+          <button class="player__button toggle" title="toggle">►</button>
+          <div>
+            <button class="volumeMuted" title="toggle">Enable Sound</button>
+            <input type="range" name="volume" class="player__slider" min="0" max="1" step="0.05" >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="javascript.js"></script>
+</body>
+</html>
